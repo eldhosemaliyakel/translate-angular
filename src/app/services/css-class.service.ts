@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class CSSClassService {
-  private cssClassObservable = new BehaviorSubject({
+  defaultClasses = {
     flexParent: ""
-  });
+  }
+  private cssClassObservable = new BehaviorSubject({...this.defaultClasses});
   currentCSSClass = this.cssClassObservable.asObservable();
 
   changeCSSClass(cssClasses: any) {

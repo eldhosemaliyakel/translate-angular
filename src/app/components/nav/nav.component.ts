@@ -25,13 +25,6 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this._translation.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang;
-      const cssClasses = {
-        flexParent: ""
-      }
-      if(this.currentLang === "ar") {
-        cssClasses.flexParent = "flex-row-reverse text-right"
-      }
-      this._cssClassService.changeCSSClass(cssClasses);
     });
 
     this.cssClassServiceSubscription = this._cssClassService.currentCSSClass.subscribe(cssClasses => {
