@@ -22,8 +22,9 @@ export class LanguageComponent implements OnInit {
       this.translate.use(lang);
     });
 
-    console.log("Hi")
-    this._router.navigate(['./home'], { relativeTo: this._route });
+    if(this._router.url.split("/").length === 2) {
+      this._router.navigate(['./home'], { relativeTo: this._route });
+    }
   }
 
 }
