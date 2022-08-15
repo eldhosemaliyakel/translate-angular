@@ -1,0 +1,13 @@
+{
+    "NAV": {
+        "HOME": "Home",
+        "ABOUT": "About"
+    },
+    "WIDGET_ONE": {
+        "HEADING": "Welcome to Widget 1",
+        "SUB_HEADING": "This is Widget 1."
+    },
+    "WIDGET_TWO": {
+        "TEXT": "This is some random texts for checking the translation."
+    }
+}

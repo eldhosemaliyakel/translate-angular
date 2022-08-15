@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between" [ngClass]="cssClasses.flexParent">
+    <div class="nav-wrap">
+        <a routerLink="home" class="mr-2 ml-2">{{ 'NAV.HOME' | translate }}</a>
+        <a routerLink="about" class="mr-2 ml-2">{{ 'NAV.ABOUT' | translate }}</a>
+    </div>
+    <button 
+        class="btn btn-primary" 
+        (click)="changeLang()">
+        {{currentLang === "en" ? "English" : "Arabic"}}
+    </button>
+</div>
